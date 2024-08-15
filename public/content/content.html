@@ -1,13 +1,18 @@
 <html>
-    <head>
 
-    </head>
+<head>
 
-    <body>
-        メインコンテンツだよ
-        <script>
-            history.pushState(null,null, '../ad/ad.html');
-        </script>
-    </body>
+</head>
+
+<body>
+    メインコンテンツだよ
+    <script>
+        history.pushState(null, null, "../content/content.html");
+
+        window.addEventListener("popstate", function (event) {
+            window.location.href = "../ad/ad.html";
+        });
+    </script>
+</body>
 
 </html>
